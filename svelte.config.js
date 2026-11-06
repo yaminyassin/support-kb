@@ -11,5 +11,6 @@ export default {
     adapter: adapter({ fallback: undefined }),
     alias: { '#lib': 'src/lib' },
     prerender: { entries: ['*'] },
+    inlineStyleThreshold: Infinity,
   },
 };

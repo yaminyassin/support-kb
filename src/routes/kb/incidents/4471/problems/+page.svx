@@ -1,0 +1,56 @@
+---
+layout: runbook
+title: '#4471 · what it shows: three problems, one ticket'
+owner: Yamin Yassin
+status: proposed
+reviewed: 2026-11-06
+signature: Yamin Yassin
+---
+
+<script>
+  import ProblemTable from '#lib/kb/ProblemTable.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+
+  const signature = 'Yamin Yassin';
+  const repo = 'https://github.com/yaminyassin/support-kb/issues';
+  const issues = {
+    parser: { href: `${repo}/1`, label: 'issue 1' },
+    hint: { href: `${repo}/2`, label: 'issue 2' },
+    'one-day-move': { href: `${repo}/3`, label: 'issue 3' },
+  };
+</script>
+
+[#4471](/kb/incidents/4471) is marked known: one issue, one fix queued. It is not one issue. It was
+merged on subject line ([decision 0001](/kb/decisions/0001-dedupe-by-subject)), and every report
+about a date has a subject that looks like every other. Read by where each report came from, and
+by what its body says, the ticket holds three problems. Each now has a ticket of its own.
+
+## The problems
+
+<ProblemTable ticket={4471} {issues} />
+
+<Callout kind="warn">
+The parser fix queued for #4471 closes only the first row. The other two keep coming after it ships.
+</Callout>
+
+## How each report was placed
+
+1. **One report, one id.** The export pages overlap, so some reports appear twice. Each id counts once.
+2. **One-day move.** The desk already read some reports as a date that moved by one day
+   (`desk-notes.json`). Their bodies say so: "Client in Lisbon got Tuesday. Client in Toronto got
+   Monday. Same meeting." Nothing is swapped. That is time zones, not the parser.
+3. **Hint.** A report through the booking form of a tenant on booking-v3: the form tells people to
+   type month first, then reads the day first.
+4. **Parser.** Every other report from a day-first tenant: the shared parser reads the month first.
+
+Intake's tag on each report is a guess from the reporter's browser. It is not used here; the
+column above shows how often it names the wrong problem.
+
+## What to change on the desk
+
+- When a merged ticket passes a few dozen reports, split it by cause, not by subject. The cause
+  table on #4471 already showed a row that was "not this ticket"; nobody opened its ticket.
+- A report the desk reads differently from its cause belongs in its own row, not a footnote.
+
+<RenderStamp {signature} />

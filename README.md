@@ -34,3 +34,7 @@ Support desk. Decision records: whoever signed them.
 ---
 
 Exported 2026-10-04 from the `support` repo, `apps/kb/` → `src/`.
+
+## Build (added 2026-11-06)
+
+`npm install && npm run build` renders every page to `build/` (SvelteKit + mdsvex, static). The rendered pages are committed in `build/` so the desk can read them as they will see them, e.g. `build/kb/incidents/4471/problems/index.html`.
