@@ -27,6 +27,7 @@
   <strong>{split.unique}</strong> reports in #{ticket} ({split.rows} rows in the export, {split.rows - split.unique} repeated) ·
   <strong>{split.groups.length}</strong> {split.groups.length === 1 ? 'problem' : 'problems'}
 </p>
+<p class="small">Counted the desk's way: each report under its cause by tenant. A one-day move stays counted where it is filed and has its own ticket too.</p>
 
 <table>
   <thead>
@@ -36,11 +37,11 @@
     {#each split.groups as g (g.problem)}
       <tr>
         <td><code>{g.problem}</code><br /><span class="name">{NAME[g.problem]}</span></td>
-        <td><strong>{g.reports.length}</strong></td>
+        <td><strong>{g.reports.length}</strong>{#if g.countedUnder}<br /><span class="small">also counted under {g.countedUnder.join(', ')}</span>{/if}</td>
         <td>{g.tenants.length}</td>
         <td class="small">{channels(g.channels)}</td>
         <td class="small">{g.firstSeen} → {g.lastSeen}</td>
-        <td>{g.mistagged}</td>
+        <td>{g.countedUnder ? '—' : g.mistagged}</td>
         <td>
           {#if issues[g.problem]}<a href={issues[g.problem]?.href}>{issues[g.problem]?.label}</a>{:else}<span class="none">none yet</span>{/if}
         </td>

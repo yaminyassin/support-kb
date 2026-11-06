@@ -37,12 +37,13 @@ The parser fix queued for #4471 closes only the first row. The other two keep co
 ## How each report was placed
 
 1. **One report, one id.** The export pages overlap, so some reports appear twice. Each id counts once.
-2. **One-day move.** The desk already read some reports as a date that moved by one day
-   (`desk-notes.json`). Their bodies say so: "Client in Lisbon got Tuesday. Client in Toronto got
-   Monday. Same meeting." Nothing is swapped. That is time zones, not the parser.
-3. **Hint.** A report through the booking form of a tenant on booking-v3: the form tells people to
+2. **Hint.** A report through the booking form of a tenant on booking-v3: the form tells people to
    type month first, then reads the day first.
-4. **Parser.** Every other report from a day-first tenant: the shared parser reads the month first.
+3. **Parser.** Every other report from a day-first tenant: the shared parser reads the month first.
+4. **One-day move.** The desk already read some reports as a date that moved by one day
+   (`desk-notes.json`). Their bodies say so: "Client in Lisbon got Tuesday. Client in Toronto got
+   Monday. Same meeting." Nothing is swapped. That is time zones, not the parser, so it has its own
+   ticket. The desk counts these where they are filed, under parser, and so does this page.
 
 Intake's tag on each report is a guess from the reporter's browser. It is not used here; the
 column above shows how often it names the wrong problem.
