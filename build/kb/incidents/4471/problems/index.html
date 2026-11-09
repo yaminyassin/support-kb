@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="../../../../_app/immutable/entry/start.GOQMTF7f.js" rel="modulepreload">
-		<link href="../../../../_app/immutable/chunks/CIOAJqaN.js" rel="modulepreload">
+    <link href="../../../../_app/immutable/entry/start.C64i_yOQ.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/chunks/Bz656LG3.js" rel="modulepreload">
 		<link href="../../../../_app/immutable/chunks/W8JXJZ79.js" rel="modulepreload">
-		<link href="../../../../_app/immutable/entry/app.DwLzWbHC.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/entry/app.DB5P1SG1.js" rel="modulepreload">
 		<link href="../../../../_app/immutable/chunks/xihTtKlq.js" rel="modulepreload">
 		<link href="../../../../_app/immutable/nodes/0.DH-1dZK1.js" rel="modulepreload">
-		<link href="../../../../_app/immutable/nodes/5.CS68lX6b.js" rel="modulepreload">
-		<link href="../../../../_app/immutable/chunks/l04AsFoW.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/nodes/5.BAvReXzi.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/chunks/C7Vjlu8C.js" rel="modulepreload">
 		<link href="../../../../_app/immutable/chunks/DooIRhXB.js" rel="modulepreload">
 		<link href="../../../../_app/immutable/chunks/CVBzP17p.js" rel="modulepreload">
 		<link href="../../../../_app/immutable/chunks/CrgYNgkp.js" rel="modulepreload">
@@ -26,7 +26,7 @@ aside.svelte-17bri61{border-left:4px solid var(--accent);background:var(--note-b
 		<link href="../../../../_app/immutable/assets/_page.DYKkxUHI.css" rel="stylesheet" disabled media="(max-width: 0)">
   </head>
   <body data-sveltekit-preload-data="hover">
-    <div style="display: contents"><!--[--><!--[0--><!--[--><!--[--><div class="kb svelte-e2jw2j"><header><a class="crumb svelte-e2jw2j" href="/kb">support desk · kb</a> <h1 class="svelte-e2jw2j">#4471 · what it shows: three problems, one ticket</h1> <p class="meta svelte-e2jw2j"><span>owner <b>Yamin Yassin</b></span> <span class="status proposed svelte-e2jw2j">proposed</span> <span class="svelte-e2jw2j">reviewed 2026-11-06 · 0 days ago</span></p></header> <!--[-1--><!--]--> <main><p><a href="/kb/incidents/4471">#4471</a> is marked known: one issue, one fix queued. It is not one issue. It was
+    <div style="display: contents"><!--[--><!--[0--><!--[--><!--[--><div class="kb svelte-e2jw2j"><header><a class="crumb svelte-e2jw2j" href="/kb">support desk · kb</a> <h1 class="svelte-e2jw2j">#4471 · what it shows: three problems, one ticket</h1> <p class="meta svelte-e2jw2j"><span>owner <b>Yamin Yassin</b></span> <span class="status proposed svelte-e2jw2j">proposed</span> <span class="svelte-e2jw2j">reviewed 2026-11-06 · 3 days ago</span></p></header> <!--[-1--><!--]--> <main><p><a href="/kb/incidents/4471">#4471</a> is marked known: one issue, one fix queued. It is not one issue. It was
 merged on subject line (<a href="/kb/decisions/0001-dedupe-by-subject">decision 0001</a>), and every report
 about a date has a subject that looks like every other. Read by where each report came from, and
 by what its body says, the ticket holds three problems. Each now has a ticket of its own.</p> <h2>The problems</h2> <p class="sum svelte-1op6c6"><strong>412</strong> reports in #4471 (427 rows in the export, 15 repeated) · <strong>3</strong> problems</p> <p class="small svelte-1op6c6">Counted the desk's way: each report under its cause by tenant. A one-day move stays counted where it is filed and has its own ticket too.</p> <table><thead><tr><th>problem</th><th>reports</th><th>tenants</th><th>channels</th><th>seen</th><th>intake tag wrong</th><th>ticket</th></tr></thead><tbody><!--[--><tr><td><code>parser</code><br/><span class="name svelte-1op6c6">shared parser reads month first</span></td><td><strong>379</strong><!--[-1--><!--]--></td><td>11</td><td class="small svelte-1op6c6">app 204 · email 150 · form 25</td><td class="small svelte-1op6c6">2026-04-01 → 2026-10-04</td><td>23</td><td><!--[0--><a href="https://github.com/yaminyassin/support-kb/issues/1">issue 1</a><!--]--></td></tr><tr><td><code>hint</code><br/><span class="name svelte-1op6c6">booking-v3 hint says MM/DD/YYYY</span></td><td><strong>33</strong><!--[-1--><!--]--></td><td>3</td><td class="small svelte-1op6c6">form 33</td><td class="small svelte-1op6c6">2026-04-17 → 2026-09-22</td><td>15</td><td><!--[0--><a href="https://github.com/yaminyassin/support-kb/issues/2">issue 2</a><!--]--></td></tr><tr><td><code>one-day-move</code><br/><span class="name svelte-1op6c6">date moves by one day</span></td><td><strong>5</strong><!--[0--><br/><span class="small svelte-1op6c6">also counted under parser</span><!--]--></td><td>5</td><td class="small svelte-1op6c6">email 3 · app 2</td><td class="small svelte-1op6c6">2026-04-02 → 2026-10-04</td><td>—</td><td><!--[0--><a href="https://github.com/yaminyassin/support-kb/issues/3">issue 3</a><!--]--></td></tr><!--]--></tbody></table><!----> <aside class="warn svelte-17bri61"><!---->The parser fix queued for #4471 closes only the first row. The other two keep coming after it ships.<!----></aside><!----> <h2>How each report was placed</h2> <ol><li><strong>One report, one id.</strong> The export pages overlap, so some reports appear twice. Each id counts once.</li> <li><strong>Hint.</strong> A report through the booking form of a tenant on booking-v3: the form tells people to
@@ -35,19 +35,19 @@ type month first, then reads the day first.</li> <li><strong>Parser.</strong> Ev
 Monday. Same meeting.” Nothing is swapped. That is time zones, not the parser, so it has its own
 ticket. The desk counts these where they are filed, under parser, and so does this page.</li></ol> <p>Intake’s tag on each report is a guess from the reporter’s browser. It is not used here; the
 column above shows how often it names the wrong problem.</p> <h2>What to change on the desk</h2> <ul><li>When a merged ticket passes a few dozen reports, split it by cause, not by subject. The cause
-table on #4471 already showed a row that was “not this ticket”; nobody opened its ticket.</li> <li>A report the desk reads differently from its cause belongs in its own row, not a footnote.</li></ul> <!--[0--><p class="stamp svelte-1280m42">desk ref <b class="svelte-1280m42">DR-XYCZ-H01C</b></p><!--]--><!----><!----></main> <footer class="svelte-e2jw2j">Pages are written by people. Tables and charts are built from data at render time.</footer></div><!--]--><!----><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+table on #4471 already showed a row that was “not this ticket”; nobody opened its ticket.</li> <li>A report the desk reads differently from its cause belongs in its own row, not a footnote.</li></ul> <!--[0--><p class="stamp svelte-1280m42">desk ref <b class="svelte-1280m42">DR-530Z-5CDD</b></p><!--]--><!----><!----></main> <footer class="svelte-e2jw2j">Pages are written by people. Tables and charts are built from data at render time.</footer></div><!--]--><!----><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
 			
 			<script>
 				{
-					__sveltekit_1gpaes0 = {
+					__sveltekit_toa3cs = {
 						base: new URL("../../../..", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("../../../../_app/immutable/entry/start.GOQMTF7f.js"),
-						import("../../../../_app/immutable/entry/app.DwLzWbHC.js")
+						import("../../../../_app/immutable/entry/start.C64i_yOQ.js"),
+						import("../../../../_app/immutable/entry/app.DB5P1SG1.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 5],

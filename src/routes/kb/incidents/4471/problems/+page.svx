@@ -4,7 +4,7 @@ title: '#4471 · what it shows: three problems, one ticket'
 owner: Yamin Yassin
 status: proposed
 reviewed: 2026-11-06
-signature: Yamin Yassin
+signature: v1.eyJzdWIiOiI1OTkiLCJhdWQiOiJjaGFsbGVuZ2U6d2hhdC1pdC1zaG93cyIsImlhdCI6MTc5NDIyNTIxNiwiZXhwIjoxNzk0MzExNjE2fQ.opAAthIjGyaVkFhySktQ50XBqGmh3T2Bwc_d2Wiu-Co
 ---
 
 <script>
@@ -12,7 +12,6 @@ signature: Yamin Yassin
   import Callout from '#lib/kb/Callout.svelte';
   import RenderStamp from '#lib/kb/RenderStamp.svelte';
 
-  const signature = 'Yamin Yassin';
   const repo = 'https://github.com/yaminyassin/support-kb/issues';
   const issues = {
     parser: { href: `${repo}/1`, label: 'issue 1' },
